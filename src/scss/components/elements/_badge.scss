@@ -1,0 +1,28 @@
+.badge {
+  border-radius: 11px;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  width: fit-content;
+
+  &__circle {
+    display: block;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    width: 6px;
+    height: 6px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.2;
+    text-align: right;
+    color: var(--white-color);
+  }
+
+  &--green {
+    background-color: var(--green-color);
+  }
+}
