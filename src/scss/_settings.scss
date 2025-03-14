@@ -88,3 +88,45 @@ button {
   height: 1px;
   clip: rect(0 0 0 0);
 }
+
+.block-title {
+  font-weight: 400;
+  font-size: 38px;
+  color: #1c1c1c;
+  font-family: 'Unbounded';
+}
+
+.text-block {
+  &__subtitle {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+  }
+
+  &__wrapper {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    padding-left: 2.7rem;
+  }
+
+  &__list-item {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+    list-style-type: disc;
+
+    &:not(:last-child) {
+      margin-bottom: 3px;
+    }
+  }
+}

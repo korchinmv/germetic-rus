@@ -6,6 +6,21 @@
   column-gap: 4px;
   width: fit-content;
 
+  &--product {
+    padding: 8px 16px;
+    border-radius: 42px;
+    column-gap: 8px;
+
+    .badge__circle {
+      width: 10px;
+      height: 10px;
+    }
+
+    .badge__text {
+      font-size: 16px;
+    }
+  }
+
   &__circle {
     display: block;
     border-radius: 50%;

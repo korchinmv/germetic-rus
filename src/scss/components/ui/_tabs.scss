@@ -1,0 +1,82 @@
+.tabs {
+  &__nav {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+
+    &::-webkit-scrollbar {
+      display: none; /*Safari and Chrome*/
+    }
+  }
+
+  &__head {
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  &__nav-item {
+    flex: 0 0 auto;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+
+      @media screen and (width <= 768px) {
+        margin-right: 24px;
+      }
+    }
+
+    &--active {
+      position: relative;
+
+      .tabs__nav-btn {
+        background-color: var(--black-color);
+        color: var(--white-color);
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      &::after {
+        @media screen and (width <= 768px) {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__nav-btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    border: 1px solid var(--black-color);
+    background-color: var(--white-color);
+    border-radius: 100px;
+    padding: 14px 22px;
+    transition:
+      color ease 0.3s,
+      background-color ease 0.3s,
+      opacity ease 0.3s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    @media screen and (width <= 768px) {
+      font-size: 12px;
+    }
+  }
+
+  &__panel {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+}

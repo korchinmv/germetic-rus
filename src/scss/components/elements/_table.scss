@@ -1,0 +1,27 @@
+.table {
+  width: 100%;
+  background-color: #fff;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--light-gray-color);
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__property {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--black-color);
+  }
+
+  &__value {
+    color: var(--black-color);
+    width: 360px;
+  }
+}

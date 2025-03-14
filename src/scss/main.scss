@@ -7,4 +7,14 @@
 // подключения компонентов страницы
 @import './components/cards/product-card';
 
+@import './components/ui/breadcrumbs';
+@import './components/ui/tabs';
+
 @import './components/elements/badge';
+@import './components/elements/availability';
+@import './components/elements/table';
+@import './components/elements/download';
+
+@import './components/sections/form';
+
+@import './components/pages/product';
