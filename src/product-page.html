@@ -192,9 +192,112 @@
               </div>
             </div>
           </div>
+          <div class="product__summary-wrap">
+            <div class="product__summary">
+              <div class="product__summary-top">
+                <div class="product__summary-feature product__summary--border">
+                  <div>
+                    <button class="product__feature-btn product__summary-color blue active">
+                      <span>
+                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M38 20.5C38 22.7981 37.5473 25.0738 36.6679 27.197C35.7884 29.3202 34.4994 31.2493 32.8744 32.8744C31.2493 34.4994 29.3202 35.7884 27.197 36.6679C25.0738 37.5473 22.7981 38 20.5 38V20.5H38Z"
+                            fill="#553928" />
+                          <path
+                            d="M20.5 3C25.1413 3 29.5925 4.84374 32.8744 8.12563C36.1563 11.4075 38 15.8587 38 20.5L20.5 20.5V3Z"
+                            fill="#CFCF00" />
+                          <path
+                            d="M3 20.5C3 15.8587 4.84375 11.4075 8.12563 8.12563C11.4075 4.84374 15.8587 3 20.5 3V20.5L3 20.5Z"
+                            fill="#34C759" />
+                          <path
+                            d="M20.5 38C15.8587 38 11.4075 36.1563 8.12563 32.8744C4.84375 29.5925 3 25.1413 3 20.5L20.5 20.5V38Z"
+                            fill="#FF4A4A" />
+                        </svg>
+                      </span>
+                      <span class="txt">Цвета герметика</span>
+                      <span>
+                        <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_325_654)">
+                            <g clip-path="url(#clip1_325_654)">
+                              <path d="M2.5 9H14.5M14.5 9L10.1665 4.5M14.5 9L10.1665 13.5" stroke="#1C1C1C"
+                                stroke-width="1.5" stroke-linecap="square" />
+                            </g>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_325_654">
+                              <rect width="16" height="19" fill="white" transform="translate(0.5)" />
+                            </clipPath>
+                            <clipPath id="clip1_325_654">
+                              <rect width="16" height="11.55" fill="white" transform="translate(0.540039 3)" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="product__summary-size">
+                    <div class="product__size-title text">Фасовка</div>
+                    <div class="product__summary-item-list">
+                      <div class="checkbox-wrapper">
+                        <label>
+                          600 мл
+                          <input type="radio" checked class="modern-radio" value="600" name="a">
+                          <span></span>
+                        </label>
+                        <label>
+                          300 мл
+                          <input type="radio" class="modern-radio" value="300" name="a">
+                          <span></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product__summary-price product__summary--border">
+                  <div class="product-price__list">
+                    <div class="product-price__roz">
+                      <div class="product-price__subtitle">Розница</div>
+                      <p class="product-price__title">680 ₽/шт.</p>
+                    </div>
+                    <div class="product-price__opt">
+                      <div class="product-price__subtitle">Оптом</div>
+                      <p class="product-price__title product-price__title--red">650 ₽/шт.</p>
+                    </div>
+                    <div class="product-price__info">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10.3333 18.6667C14.9357 18.6667 18.6667 14.9357 18.6667 10.3333C18.6667 5.73096 14.9357 2 10.3333 2C5.73096 2 2 5.73096 2 10.3333C2 14.9357 5.73096 18.6667 10.3333 18.6667Z"
+                          stroke="#BDBDBD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M10.333 14.2222V10.8889M10.333 6.44446H10.3413" stroke="#BDBDBD" stroke-width="2.5"
+                          stroke-linecap="square" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product__summary-bottom">
+                  <div class="product__counter-button counter-button">
+                    <button class="counter-button__decrement" id="decrementBtn">-</button>
+                    <span class="counter-button__num" id="counter">1</span>
+                    <button class="counter-button__increment" id="incrementBtn">+</button>
+                  </div>
+
+                  <button class="product__btn-kp button-primary">Получить счёт/КП
+                    <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 6H13M13 6L8.6665 1.5M13 6L8.6665 10.5" stroke="white" stroke-width="1.5"
+                        stroke-linecap="square" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+    @include('partials/products-slider.html')
 
     <section class="product__form form">
       <div class="container">
@@ -217,7 +320,7 @@
 
               <div class="form__input-box-right">
                 <div class="form__input-group">
-                  <input class="form__input" id="check-amount_page" name="count" type="number" placeholder="Количество"
+                  <input class="form__input" id="check-amount_page" name="count" type="text" placeholder="Количество"
                     pattern="\d">
                 </div>
 
@@ -228,42 +331,45 @@
               </div>
             </div>
 
-            <div class="form__input-group">
+            <div class="form__input-box mb">
               <input class="form__input form__input--comment" name="check-comment_page" id="check-comment_page"
                 placeholder="Комментарий">
+            </div>
 
-              <label class="button form__file button__arr">
-                <input type="file" id="check-file_page">
-                <div class="form__button-svg-box button__arr-svg-box">
-                  <img src="/local/templates/germetic/assets/images/paperclip.svg" alt="">
-                </div>
-
-                <span class="name">Прикрепить реквизиты</span> <span class="file__size"></span>
-
-                <div class="form__button-svg-box button__arr-svg-box icon-close">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11" fill="none">
-                    <path d="M1 0.5L6 5.5M11 10.5L6 5.5M6 5.5L11 0.5M6 5.5L1 10.5" stroke="#1C1C1C"></path>
-                  </svg>
-                </div>
+            <div class="form__inputs-wrap mb">
+              <label class="form__file-lable input-file">
+                <svg class="input-file__icon" width="21" height="20" viewBox="0 0 21 20" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M11.3297 10.15L8.85969 12.62C8.53405 12.9447 8.27568 13.3305 8.09939 13.7552C7.9231 14.1799 7.83236 14.6352 7.83236 15.095C7.83236 15.5549 7.9231 16.0102 8.09939 16.4349C8.27568 16.8596 8.53405 17.2454 8.85969 17.57C9.18436 17.8957 9.57011 18.154 9.99481 18.3303C10.4195 18.5066 10.8748 18.5974 11.3347 18.5974C11.7945 18.5974 12.2499 18.5066 12.6746 18.3303C13.0993 18.154 13.485 17.8957 13.8097 17.57L17.6997 13.68C19.0109 12.3663 19.7473 10.5861 19.7473 8.73003C19.7473 6.87396 19.0109 5.09372 17.6997 3.78003C16.386 2.46884 14.6058 1.73242 12.7497 1.73242C10.8936 1.73242 9.11337 2.46884 7.79969 3.78003L3.55969 8.02003C1.21969 10.36 1.21969 14.16 3.55969 16.51"
+                    stroke="#1C1C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <input class="input-file__input" type="file" name="file"> <span class="input-file__text">Прикрепить
+                  реквизиты</span>
               </label>
 
-              <div class="form__input-group">
-                <label class="catalog__filter">
-                  <input class="form__input" name="send" id="check-delivery_page" type="checkbox" checked="checked">
-                  Требуется доставка
+              <div class="form__checkbox-wrap">
+                <label class="form__checkbox custom-checkbox">
+                  <input class="custom-checkbox__input input-checkbox visually-hidden" type="checkbox"
+                    data-validate-field="checkbox">
+                  <span class="custom-checkbox__span"></span>
                 </label>
+                <span class="custom-checkbox__text">Требуется доставка</span>
               </div>
             </div>
 
             <div class="form__bottom">
-              <button class="form__btn button button__arr button__arr--sg" type="submit">
-                Отправить
-                <div class="form__button-svg-box button__arr-svg-box">
-                  <img src="/local/templates/germetic/assets/images/arr_right_white.svg" alt="стрелка вправо">
-                </div>
+              <button class="form__send-btn button-primary">Отправить
+
+                <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 6H14M14 6L9.6665 1.5M14 6L9.6665 10.5" stroke="white" stroke-width="1.5"
+                    stroke-linecap="square" />
+                </svg>
               </button>
-              <div class="form__subtitle text">Нажимая на кнопку “Отправить”, Вы соглашаетесь на <a
-                  class="form__link btn-link" href="#">обработку персональных данных</a></div>
+
+              <div class="form__text-policy">Нажимая на кнопку “Отправить”, Вы соглашаетесь на
+                <a class="form__text-policy-link" href="#">обработку персональных данных</a>
+              </div>
             </div>
           </form>
 

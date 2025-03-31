@@ -1,0 +1,71 @@
+.slider-controls {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  z-index: 4;
+
+  &__prev,
+  &__next {
+    border: 1px solid var(--line-color);
+    border-radius: 30px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border-color 0.3s ease;
+
+    &:hover {
+      border-color: var(--red-color);
+
+      svg {
+        path {
+          stroke: var(--red-color);
+          transition: all ease 0.3s;
+        }
+
+        rect {
+          fill: var(--red-color);
+          transition: all ease 0.3s;
+        }
+      }
+    }
+  }
+
+  &__prev {
+    transform: rotate(180deg);
+  }
+
+  svg {
+    path,
+    rect {
+      transition: all ease 0.3s;
+    }
+  }
+}
+
+.swiper-button-disabled {
+  cursor: default;
+
+  &:hover {
+    svg {
+      path {
+        opacity: 0.5;
+      }
+
+      rect {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  svg {
+    path {
+      opacity: 0.5;
+    }
+
+    rect {
+      opacity: 0.5;
+    }
+  }
+}

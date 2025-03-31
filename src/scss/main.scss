@@ -9,6 +9,11 @@
 
 @import './components/ui/breadcrumbs';
 @import './components/ui/tabs';
+@import './components/ui/counter-button';
+@import './components/ui/button-primary';
+@import './components/ui/slider-controls';
+@import './components/ui/input-file';
+@import './components/ui/custom-checkbox';
 
 @import './components/elements/badge';
 @import './components/elements/availability';
@@ -16,5 +21,6 @@
 @import './components/elements/download';
 
 @import './components/sections/form';
+@import './components/sections/products-slider';
 
 @import './components/pages/product';

@@ -1,0 +1,22 @@
+.counter-button {
+  border: 1px solid var(--line-color);
+  border-radius: 100px;
+  width: 295px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+
+  &__num {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  &__decrement,
+  &__increment {
+    font-weight: 400;
+    font-size: 24px;
+  }
+}

@@ -4,6 +4,8 @@
   }
 
   &__wrapper {
+    display: flex;
+    gap: 20px;
     margin-bottom: 160px;
   }
 
@@ -33,4 +35,143 @@
       margin-bottom: 20px;
     }
   }
+  &__summary-wrap {
+    max-width: 770px;
+    width: 100%;
+  }
+  &__summary {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    &-top {
+      background-color: var(--bg-color);
+      padding: 40px;
+    }
+    &--border {
+      position: relative;
+    }
+    &--border::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 690px;
+      height: 1px;
+      background-color: var(--line-color);
+    }
+    &-feature {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+    }
+    &-item-list {
+      display: flex;
+      gap: 16px;
+    }
+  }
+  &__summary-top {
+    display: flex;
+    flex-direction: column;
+  }
+  &__feature-btn {
+    border: 1px solid var(--black-color);
+    border-radius: 100px;
+    width: 295px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .txt {
+      margin: 0 8px;
+    }
+    svg {
+      vertical-align: middle;
+    }
+  }
+  &__size-title {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--black-color);
+  }
+  &-price__list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  &-price {
+    &__subtitle {
+      margin-bottom: 16px;
+    }
+    &__title {
+      font-weight: 400;
+      font-size: 34px;
+      line-height: 74%;
+      color: #1c1c1c;
+      font-family: 'Unbounded';
+      &--red {
+        color: var(--red-color);
+      }
+    }
+  }
+
+  &__summary-price {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__summary-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btn-kp {
+    max-width: 335px;
+    width: 100%;
+    height: 60px;
+  }
+}
+.checkbox-wrapper {
+  display: flex;
+}
+.checkbox-wrapper input {
+  сursor: pointer;
+  position: absolute;
+  opacity: 0;
+}
+.checkbox-wrapper label:not(:last-child) {
+  margin-right: 16px;
+}
+.checkbox-wrapper label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  color: var(--black-color);
+  user-select: none;
+  padding: 10px 24px;
+}
+.checkbox-wrapper label.active {
+  color: var(--red-color);
+}
+.checkbox-wrapper span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 100px;
+  border: 1px solid var(--line-color);
+}
+.checkbox-wrapper label input:checked ~ span {
+  background: rgba(227, 60, 24, 0.1);
+  border: 1px solid var(--red-color);
 }
