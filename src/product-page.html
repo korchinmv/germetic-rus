@@ -235,16 +235,17 @@
                       </span>
                     </button>
                   </div>
+
                   <div class="product__summary-size">
                     <div class="product__size-title text">Фасовка</div>
                     <div class="product__summary-item-list">
                       <div class="checkbox-wrapper">
-                        <label>
+                        <label class="checkbox-wrapper__label">
                           600 мл
                           <input type="radio" checked class="modern-radio" value="600" name="a">
                           <span></span>
                         </label>
-                        <label>
+                        <label class="checkbox-wrapper__label">
                           300 мл
                           <input type="radio" class="modern-radio" value="300" name="a">
                           <span></span>
@@ -290,6 +291,149 @@
                     </svg>
                   </button>
                 </div>
+              </div>
+
+              <div class="product__summary-calculator calculator">
+                <h3 class="calculator__title"><span>Калькулятор</span> расчета расхода герметика</h3>
+
+                <div class="calculator__inputs">
+                  <input class="calculator__input" id="width" placeholder="Ширина шва, мм*" type="text">
+                  <input class="calculator__input" id="depth" placeholder="Глубина шва, мм*" type="text">
+                  <input class="calculator__input" id="length" placeholder="Длина шва, мм*" type="text">
+                </div>
+
+                <div class="calculator__result">
+                  <span class="calculator__text">Необходимое количество штук в тубах по <span
+                      class="calculator__text-num"></span></span>
+
+                  <span class="calculator__result-num"></span>
+                </div>
+              </div>
+
+              <div class="product__summary-about">
+                <div class="product__summary-about-top">
+                  <h3 class="product__summary-title">Хотите получить <span>специальную скидку</span> для оптовиков?</h3>
+
+                  <p class="product__summary-text">Оставьте заявку и мы пришлем индивидуальный расчет!</p>
+
+                  <button class="product__btn button-transparent">
+                    Оставить заявку
+                    <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 6H14M14 6L9.6665 1.5M14 6L9.6665 10.5" stroke="#1C1C1C" stroke-width="1.5"
+                        stroke-linecap="square" />
+                    </svg>
+                  </button>
+                </div>
+
+                <button class="product__more-btn">
+                  Способы оплаты и условия доставки
+
+                  <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L7 2L13 8" stroke="#1C1C1C" stroke-width="2" />
+                  </svg>
+                </button>
+
+                <div class="product__summary-about-content">
+                  <h4 class="product__summary-subtitle">Способы оплаты</h4>
+                  <div class="product__summary-text-block text-block">
+                    <ul class="text-block__list">
+                      <li class="text-block__list-item">
+                        Безналичная оплата по счету
+                      </li>
+                      <li class="text-block__list-item">Оплата картой в офисе компании
+                      <li class="text-block__list-item">Оплата картой через Сбербанк Онлайн</li>
+                    </ul>
+                  </div>
+
+                  <h4 class="product__summary-subtitle">Самовывоз</h4>
+                  <ul class="product__summary-info">
+                    <li class="product__summary-info-item">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="9.75" stroke="#BDBDBD" stroke-width="1.5" />
+                        <path d="M12 5.5V12L15.5 15.5" stroke="#BDBDBD" stroke-width="1.5" />
+                      </svg>
+                      с 09:00 до 15:00 (ПН-ПТ)
+                    </li>
+                    <li class="product__summary-info-item">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M6.4983 4.48251C8.10355 2.88064 10.2648 1.98855 12.5123 2.00011C14.7599 2.01167 16.9121 2.92594 18.5014 4.54424C20.0907 6.16255 20.9885 8.35412 20.9999 10.6427C21.0112 12.9313 20.1352 15.132 18.562 16.7666L14.0532 21.3577C13.6492 21.769 13.1014 22 12.5302 22C11.9589 22 11.4111 21.769 11.0071 21.3577L6.4983 16.7666C4.89866 15.1376 4 12.9282 4 10.6245C4 8.32087 4.89866 6.11154 6.4983 4.48251Z"
+                          stroke="#E33C18" stroke-width="1.5" stroke-linejoin="round" />
+                        <path
+                          d="M12.5 13C13.8807 13 15 11.8807 15 10.5C15 9.11929 13.8807 8 12.5 8C11.1193 8 10 9.11929 10 10.5C10 11.8807 11.1193 13 12.5 13Z"
+                          stroke="#E33C18" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      Адрес склада: Москва улица Красная сосна 2 к1 стр1 МОСТРАНССКЛАД
+                    </li>
+                  </ul>
+
+                  <p class="product__summary-text"><span>Удобная парковка</span>, въезд платный-оплачиваем мы. </p>
+
+                  <h4 class="product__summary-subtitle">Доставка по Москве и МО</h4>
+                  <p class="product__summary-text">1-2 дня с момента оплаты, стоимость от 1000 руб</p>
+
+                  <h4 class="product__summary-subtitle">Экспресс доставка по Москве и МО</h4>
+                  <p class="product__summary-text">От 1 часа до 1 дня, стоимость от 1000 руб</p>
+
+                  <h4 class="product__summary-subtitle">Доставка по России</h4>
+                  <p class="product__sunnary-text">Отправка транспортными компаниями (ТК): «Байкал сервис», «Деловые
+                    Линии», «Бюро перевозок» до терминалов, либо адресная доставка. Стоимость грузоперевозки
+                    рассчитывается по тарифам ТК (рассчитаем по запросу)</p>
+                </div>
+              </div>
+
+
+              <div class="product__summary-contacts">
+                <h4 class="product__summary-contacts-subtitle">Наши контакты</h4>
+
+                <div class="product__summary-contacts-block">
+                  <div class="product__summary-tel">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M14.0514 2.0001C16.0897 2.21487 17.9936 3.11889 19.4483 4.56268C20.903 6.00646 21.8213 7.90351 22.0514 9.9401M14.0514 6.0001C15.0349 6.19403 15.9374 6.67912 16.6418 7.39241C17.3461 8.10569 17.8198 9.01423 18.0014 10.0001M22.0014 16.9201V19.9201C22.0025 20.1986 21.9455 20.4743 21.8339 20.7294C21.7223 20.9846 21.5587 21.2137 21.3535 21.402C21.1483 21.5902 20.906 21.7336 20.6421 21.8228C20.3783 21.912 20.0988 21.9452 19.8214 21.9201C16.7443 21.5854 13.7886 20.5339 11.1914 18.8501C8.77523 17.3148 6.72673 15.2663 5.1914 12.8501C3.50172 10.2411 2.45001 7.27101 2.1214 4.1801C2.09641 3.90356 2.12927 3.62486 2.2179 3.36172C2.30652 3.09859 2.44897 2.85679 2.63616 2.65172C2.82336 2.44665 3.0512 2.28281 3.30519 2.17062C3.55917 2.05843 3.83374 2.00036 4.1114 2.0001H7.1114C7.5967 1.99532 8.06719 2.16718 8.43516 2.48363C8.80313 2.80008 9.04348 3.23954 9.1114 3.7201C9.23768 4.68023 9.47252 5.62293 9.8114 6.5301C9.94594 6.88802 9.97506 7.27701 9.8953 7.65098C9.81555 8.02494 9.63026 8.36821 9.3614 8.6401L8.0914 9.9101C9.51495 12.4136 11.5879 14.4865 14.0914 15.9101L15.3614 14.6401C15.6333 14.3712 15.9766 14.1859 16.3505 14.1062C16.7245 14.0264 17.1135 14.0556 17.4714 14.1901C18.3786 14.529 19.3213 14.7638 20.2814 14.8901C20.7672 14.9586 21.2108 15.2033 21.5279 15.5776C21.8451 15.9519 22.0136 16.4297 22.0014 16.9201Z"
+                        stroke="#BDBDBD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    <ul class="product__summary-contacts-tels">
+                      <li class="product__summary-contacts-tels-item"><a class="product__summary-contacts-tels-link"
+                          href="tel:+74951202329">+7 (495) 120-23-29</a>
+                      </li>
+                      <li class="product__summary-contacts-tels-item"><a class="product__summary-contacts-tels-link"
+                          href="tel:+74951206502">+7 (495) 120-65-02</a>
+                      </li>
+                      <li class="product__summary-contacts-tels-item"><a class="product__summary-contacts-tels-link"
+                          href="tel:+79300360606">+7 (930)
+                          036-06-06 (WhatsApp)</a></li>
+                    </ul>
+                  </div>
+
+                  <ul class="product__summary-mail">
+                    <li class="product__summary-mail-item">
+                      <a class="product__summary-mail-link" href="mailto:">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M4 6L10.108 10.612L10.11 10.614C10.788 11.111 11.127 11.36 11.499 11.456C11.8276 11.541 12.1724 11.541 12.501 11.456C12.873 11.36 13.213 11.111 13.893 10.612C13.893 10.612 17.81 7.606 20 6M3 15.8V8.2C3 7.08 3 6.52 3.218 6.092C3.41 5.715 3.715 5.41 4.092 5.218C4.52 5 5.08 5 6.2 5H17.8C18.92 5 19.48 5 19.907 5.218C20.284 5.41 20.59 5.715 20.782 6.092C21 6.519 21 7.079 21 8.197V15.804C21 16.922 21 17.48 20.782 17.908C20.59 18.2845 20.2837 18.5904 19.907 18.782C19.48 19 18.921 19 17.803 19H6.197C5.079 19 4.519 19 4.092 18.782C3.71569 18.5903 3.40974 18.2843 3.218 17.908C3 17.48 3 16.92 3 15.8Z"
+                            stroke="#BDBDBD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        sales@germetic-rus.ru
+                      </a>
+                    </li>
+                    <li class="product__summary-mail-item">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M6.4983 4.48251C8.10355 2.88064 10.2648 1.98855 12.5123 2.00011C14.7599 2.01167 16.9121 2.92594 18.5014 4.54424C20.0907 6.16255 20.9885 8.35412 20.9999 10.6427C21.0112 12.9313 20.1352 15.132 18.562 16.7666L14.0532 21.3577C13.6492 21.769 13.1014 22 12.5302 22C11.9589 22 11.4111 21.769 11.0071 21.3577L6.4983 16.7666C4.89866 15.1376 4 12.9282 4 10.6245C4 8.32087 4.89866 6.11154 6.4983 4.48251Z"
+                          stroke="#BDBDBD" stroke-width="1.5" stroke-linejoin="round" />
+                        <path
+                          d="M12.5 13C13.8807 13 15 11.8807 15 10.5C15 9.11929 13.8807 8 12.5 8C11.1193 8 10 9.11929 10 10.5C10 11.8807 11.1193 13 12.5 13Z"
+                          stroke="#BDBDBD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+
+                      Москва ул.Красная сосна 2 к1 стр1 офис 555
+                    </li>
+                  </ul>
+                </div>
+
+                <p class="product__summary-contacts-text">Документооборот по ЭДО — оператор Калуга Астрал</p>
               </div>
             </div>
           </div>
