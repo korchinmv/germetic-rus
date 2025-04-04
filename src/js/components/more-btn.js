@@ -4,8 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
     ".product__summary-about-content"
   );
 
-  toggleBtn.addEventListener("click", function () {
-    this.classList.toggle("product__more-btn--active");
-    contentBlock.classList.toggle("product__summary-about-content--active");
-  });
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", function () {
+      this.classList.toggle("product__more-btn--active");
+      contentBlock.classList.toggle("product__summary-about-content--active");
+    });
+  }
 });

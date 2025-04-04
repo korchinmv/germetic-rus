@@ -274,6 +274,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: var(--red-color);
+    }
+
     .txt {
       margin: 0 8px;
     }
@@ -300,6 +306,7 @@
     &__subtitle {
       margin-bottom: 16px;
     }
+
     &__title {
       font-weight: 400;
       font-size: 34px;
@@ -308,6 +315,57 @@
       font-family: 'Unbounded';
       &--red {
         color: var(--red-color);
+      }
+    }
+
+    &__info {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    &__info-wrapper {
+      position: relative;
+      align-self: flex-end;
+
+      &:hover {
+        .product-price__info-tooltip {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    &__info-tooltip {
+      background-color: var(--white-color);
+      padding: 4px 8px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.33333;
+      position: relative;
+      position: absolute;
+      left: 50%;
+      top: 30px;
+      transform: translateX(-50%);
+      width: fit-content;
+      z-index: 4;
+      min-width: 180px;
+      opacity: 0;
+      visibility: hidden;
+      transition:
+        opacity 0.3s,
+        visibility 0.3s;
+
+      &::before {
+        content: '';
+        display: block;
+        background-color: var(--white-color);
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
       }
     }
   }

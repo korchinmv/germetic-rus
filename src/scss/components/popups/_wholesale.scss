@@ -1,0 +1,60 @@
+.wholesale {
+  max-width: 856px;
+
+  &__title {
+    margin-bottom: 30px;
+
+    @media screen and (width <= 768px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__info {
+    background-color: var(--bg-color);
+    padding: 24px;
+    margin-bottom: 32px;
+
+    @media screen and (width <= 768px) {
+      padding: 12px;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+
+    @media screen and (width <= 768px) {
+      font-size: 14px;
+    }
+
+    &--bold {
+      font-weight: 700;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__list {
+    padding-left: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (width <= 990px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__list-item {
+    font-weight: 700;
+    list-style-type: disc;
+    font-size: 18px;
+    line-height: 1.33333;
+
+    @media screen and (width <= 768px) {
+      font-size: 14px;
+    }
+  }
+}

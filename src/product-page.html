@@ -265,14 +265,19 @@
                       <div class="product-price__subtitle">Оптом</div>
                       <p class="product-price__title product-price__title--red">650 ₽/шт.</p>
                     </div>
-                    <div class="product-price__info">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M10.3333 18.6667C14.9357 18.6667 18.6667 14.9357 18.6667 10.3333C18.6667 5.73096 14.9357 2 10.3333 2C5.73096 2 2 5.73096 2 10.3333C2 14.9357 5.73096 18.6667 10.3333 18.6667Z"
-                          stroke="#BDBDBD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M10.333 14.2222V10.8889M10.333 6.44446H10.3413" stroke="#BDBDBD" stroke-width="2.5"
-                          stroke-linecap="square" stroke-linejoin="round" />
-                      </svg>
+                    <div class="product-price__info-wrapper">
+                      <div class="product-price__info">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.3333 18.6667C14.9357 18.6667 18.6667 14.9357 18.6667 10.3333C18.6667 5.73096 14.9357 2 10.3333 2C5.73096 2 2 5.73096 2 10.3333C2 14.9357 5.73096 18.6667 10.3333 18.6667Z"
+                            stroke="#BDBDBD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M10.333 14.2222V10.8889M10.333 6.44446H10.3413" stroke="#BDBDBD" stroke-width="2.5"
+                            stroke-linecap="square" stroke-linejoin="round" />
+                        </svg>
+                      </div>
+
+
+                      <div class="product-price__info-tooltip">Оптовая цена действует при заказе от 50 000 руб.</div>
                     </div>
                   </div>
                 </div>
@@ -280,7 +285,7 @@
                 <div class="product__summary-bottom">
                   <div class="product__counter-button counter-button">
                     <button class="counter-button__decrement" id="decrementBtn">-</button>
-                    <span class="counter-button__num" id="counter">1</span>
+                    <input class="counter-button__num" type="text" id="counter" min="1" value="1">
                     <button class="counter-button__increment" id="incrementBtn">+</button>
                   </div>
 

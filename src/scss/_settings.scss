@@ -94,6 +94,10 @@ button {
   font-size: 38px;
   color: #1c1c1c;
   font-family: 'Unbounded';
+
+  @media screen and (width <= 768px) {
+    font-size: 20px;
+  }
 }
 
 .section-title {
