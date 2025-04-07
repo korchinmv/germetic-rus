@@ -4,7 +4,7 @@ import { Navigation, Pagination, Thumbs, Autoplay } from "swiper/modules";
 Swiper.use([Navigation, Pagination, Thumbs, Autoplay]);
 
 const productsSwiper = new Swiper(".products-slider__slider", {
-  slidesPerView: 2,
+  slidesPerView: 1.1,
   spaceBetween: 16,
   navigation: {
     nextEl: ".products-slider__slider-controls-next",
@@ -16,12 +16,12 @@ const productsSwiper = new Swiper(".products-slider__slider", {
   // },
   breakpoints: {
     // when window width is >= 990px
-    990: {
+    1600: {
       slidesPerView: 4,
       spaceBetween: 20,
     },
 
-    630: {
+    1100: {
       slidesPerView: 3,
       spaceBetween: 20,
     },

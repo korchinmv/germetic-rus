@@ -311,7 +311,7 @@
                   <span class="calculator__text">Необходимое количество штук в тубах по <span
                       class="calculator__text-num"></span></span>
 
-                  <span class="calculator__result-num"></span>
+                  <span class="calculator__result-num" id="result"></span>
                 </div>
               </div>
 
@@ -387,7 +387,6 @@
                 </div>
               </div>
 
-
               <div class="product__summary-contacts">
                 <h4 class="product__summary-contacts-subtitle">Наши контакты</h4>
 
@@ -440,6 +439,333 @@
 
                 <p class="product__summary-contacts-text">Документооборот по ЭДО — оператор Калуга Астрал</p>
               </div>
+
+              <ul class="product__accordion accordion">
+                <li class="accordion__item">
+                  <button class="accordion__btn">
+                    <span class="accordion__name"><span class="accordion__name-red">Калькулятор</span> расчета расхода
+                      герметика
+                    </span>
+
+                    <svg class="accordion__arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 16.5L12 7.5L21 16.5" stroke="#1C1C1C" stroke-width="2.5" />
+                    </svg>
+                  </button>
+
+                  <div class="accordion__content calculator">
+                    <div class="calculator__inputs">
+                      <input class="calculator__input" id="widthMobile" placeholder="Ширина шва, мм*" type="text">
+                      <input class="calculator__input" id="depthMobile" placeholder="Глубина шва, мм*" type="text">
+                      <input class="calculator__input" id="lengthMobile" placeholder="Длина шва, мм*" type="text">
+                    </div>
+
+                    <div class="calculator__result">
+                      <span class="calculator__text">Необходимое количество штук в тубах по <span
+                          class="calculator__text-num"></span></span>
+
+                      <span class="calculator__result-num" id="resultMobile"></span>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="accordion__item">
+                  <button class="accordion__btn">
+                    <span class="accordion__name">Хотите получить <span class="accordion__name-red-under">специальную
+                        скидку</span> для оптовиков?
+                    </span>
+
+                    <svg class="accordion__arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 16.5L12 7.5L21 16.5" stroke="#1C1C1C" stroke-width="2.5" />
+                    </svg>
+                  </button>
+                  <div class="accordion__content">
+                    <p class="product__summary-text">Оставьте заявку и мы пришлем индивидуальный расчет!</p>
+
+                    <button class="product__btn button-transparent">
+                      Оставить заявку
+                      <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 6H14M14 6L9.6665 1.5M14 6L9.6665 10.5" stroke="#1C1C1C" stroke-width="1.5"
+                          stroke-linecap="square" />
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+
+                <li class="accordion__item">
+                  <button class="accordion__btn">
+                    <span class="accordion__name">Способы оплаты и условия доставки</span>
+
+                    <svg class="accordion__arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 16.5L12 7.5L21 16.5" stroke="#1C1C1C" stroke-width="2.5" />
+                    </svg>
+                  </button>
+                  <div class="accordion__content">
+                    <h4 class="product__summary-subtitle">Способы оплаты</h4>
+                    <div class="product__summary-text-block text-block">
+                      <ul class="text-block__list">
+                        <li class="text-block__list-item">
+                          Безналичная оплата по счету
+                        </li>
+                        <li class="text-block__list-item">Оплата картой в офисе компании
+                        <li class="text-block__list-item">Оплата картой через Сбербанк Онлайн</li>
+                      </ul>
+                    </div>
+
+                    <h4 class="product__summary-subtitle">Самовывоз</h4>
+                    <ul class="product__summary-info">
+                      <li class="product__summary-info-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="12" cy="12" r="9.75" stroke="#BDBDBD" stroke-width="1.5" />
+                          <path d="M12 5.5V12L15.5 15.5" stroke="#BDBDBD" stroke-width="1.5" />
+                        </svg>
+                        с 09:00 до 15:00 (ПН-ПТ)
+                      </li>
+                      <li class="product__summary-info-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M6.4983 4.48251C8.10355 2.88064 10.2648 1.98855 12.5123 2.00011C14.7599 2.01167 16.9121 2.92594 18.5014 4.54424C20.0907 6.16255 20.9885 8.35412 20.9999 10.6427C21.0112 12.9313 20.1352 15.132 18.562 16.7666L14.0532 21.3577C13.6492 21.769 13.1014 22 12.5302 22C11.9589 22 11.4111 21.769 11.0071 21.3577L6.4983 16.7666C4.89866 15.1376 4 12.9282 4 10.6245C4 8.32087 4.89866 6.11154 6.4983 4.48251Z"
+                            stroke="#E33C18" stroke-width="1.5" stroke-linejoin="round" />
+                          <path
+                            d="M12.5 13C13.8807 13 15 11.8807 15 10.5C15 9.11929 13.8807 8 12.5 8C11.1193 8 10 9.11929 10 10.5C10 11.8807 11.1193 13 12.5 13Z"
+                            stroke="#E33C18" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Адрес склада: Москва улица Красная сосна 2 к1 стр1 МОСТРАНССКЛАД
+                      </li>
+                    </ul>
+
+                    <p class="product__summary-text"><span>Удобная парковка</span>, въезд платный-оплачиваем мы. </p>
+
+                    <h4 class="product__summary-subtitle">Доставка по Москве и МО</h4>
+                    <p class="product__summary-text">1-2 дня с момента оплаты, стоимость от 1000 руб</p>
+
+                    <h4 class="product__summary-subtitle">Экспресс доставка по Москве и МО</h4>
+                    <p class="product__summary-text">От 1 часа до 1 дня, стоимость от 1000 руб</p>
+
+                    <h4 class="product__summary-subtitle">Доставка по России</h4>
+                    <p class="product__sunnary-text">Отправка транспортными компаниями (ТК): «Байкал сервис», «Деловые
+                      Линии», «Бюро перевозок» до терминалов, либо адресная доставка. Стоимость грузоперевозки
+                      рассчитывается по тарифам ТК (рассчитаем по запросу)</p>
+                  </div>
+                </li>
+
+                <li class="accordion__item">
+                  <button class="accordion__btn">
+                    <span class="accordion__name">Наши контакты</span>
+
+                    <svg class="accordion__arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 16.5L12 7.5L21 16.5" stroke="#1C1C1C" stroke-width="2.5" />
+                    </svg>
+                  </button>
+                  <div class="accordion__content">
+
+                    <div class="product__summary-contacts-tels-wrap">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.0504 2.0001C16.0887 2.21487 17.9926 3.11889 19.4473 4.56268C20.902 6.00646 21.8203 7.90351 22.0504 9.9401M14.0504 6.0001C15.0339 6.19403 15.9364 6.67912 16.6408 7.39241C17.3452 8.10569 17.8189 9.01423 18.0004 10.0001M22.0004 16.9201V19.9201C22.0016 20.1986 21.9445 20.4743 21.8329 20.7294C21.7214 20.9846 21.5577 21.2137 21.3525 21.402C21.1473 21.5902 20.905 21.7336 20.6412 21.8228C20.3773 21.912 20.0978 21.9452 19.8204 21.9201C16.7433 21.5854 13.7876 20.5339 11.1904 18.8501C8.77425 17.3148 6.72576 15.2663 5.19042 12.8501C3.50074 10.2411 2.44903 7.27101 2.12042 4.1801C2.09543 3.90356 2.1283 3.62486 2.21692 3.36172C2.30555 3.09859 2.44799 2.85679 2.63519 2.65172C2.82238 2.44665 3.05023 2.28281 3.30421 2.17062C3.5582 2.05843 3.83276 2.00036 4.11042 2.0001H7.11042C7.59573 1.99532 8.06621 2.16718 8.43418 2.48363C8.80215 2.80008 9.0425 3.23954 9.11042 3.7201C9.23671 4.68023 9.47154 5.62293 9.81042 6.5301C9.94497 6.88802 9.97408 7.27701 9.89433 7.65098C9.81457 8.02494 9.62928 8.36821 9.36042 8.6401L8.09042 9.9101C9.51398 12.4136 11.5869 14.4865 14.0904 15.9101L15.3604 14.6401C15.6323 14.3712 15.9756 14.1859 16.3495 14.1062C16.7235 14.0264 17.1125 14.0556 17.4704 14.1901C18.3776 14.529 19.3203 14.7638 20.2804 14.8901C20.7662 14.9586 21.2098 15.2033 21.527 15.5776C21.8441 15.9519 22.0126 16.4297 22.0004 16.9201Z"
+                          stroke="#BDBDBD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+
+                      <ul class="product__summary-contacts-tels">
+                        <li class="product__summary-contacts-tels-item"><a class="product__summary-contacts-tels-link"
+                            href="tel:+74951202329">+7 (495) 120-23-29</a>
+                        </li>
+                        <li class="product__summary-contacts-tels-item"><a class="product__summary-contacts-tels-link"
+                            href="tel:+74951206502">+7 (495) 120-65-02</a>
+                        </li>
+                        <li class="product__summary-contacts-tels-item"><a class="product__summary-contacts-tels-link"
+                            href="tel:+79300360606">+7 (930)
+                            036-06-06 (WhatsApp)</a></li>
+                      </ul>
+                    </div>
+
+
+                    <ul class="product__summary-mail">
+                      <li class="product__summary-mail-item">
+                        <a class="product__summary-mail-link" href="mailto:">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M4 6L10.108 10.612L10.11 10.614C10.788 11.111 11.127 11.36 11.499 11.456C11.8276 11.541 12.1724 11.541 12.501 11.456C12.873 11.36 13.213 11.111 13.893 10.612C13.893 10.612 17.81 7.606 20 6M3 15.8V8.2C3 7.08 3 6.52 3.218 6.092C3.41 5.715 3.715 5.41 4.092 5.218C4.52 5 5.08 5 6.2 5H17.8C18.92 5 19.48 5 19.907 5.218C20.284 5.41 20.59 5.715 20.782 6.092C21 6.519 21 7.079 21 8.197V15.804C21 16.922 21 17.48 20.782 17.908C20.59 18.2845 20.2837 18.5904 19.907 18.782C19.48 19 18.921 19 17.803 19H6.197C5.079 19 4.519 19 4.092 18.782C3.71569 18.5903 3.40974 18.2843 3.218 17.908C3 17.48 3 16.92 3 15.8Z"
+                              stroke="#BDBDBD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          sales@germetic-rus.ru
+                        </a>
+                      </li>
+                      <li class="product__summary-mail-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M6.4983 4.48251C8.10355 2.88064 10.2648 1.98855 12.5123 2.00011C14.7599 2.01167 16.9121 2.92594 18.5014 4.54424C20.0907 6.16255 20.9885 8.35412 20.9999 10.6427C21.0112 12.9313 20.1352 15.132 18.562 16.7666L14.0532 21.3577C13.6492 21.769 13.1014 22 12.5302 22C11.9589 22 11.4111 21.769 11.0071 21.3577L6.4983 16.7666C4.89866 15.1376 4 12.9282 4 10.6245C4 8.32087 4.89866 6.11154 6.4983 4.48251Z"
+                            stroke="#BDBDBD" stroke-width="1.5" stroke-linejoin="round" />
+                          <path
+                            d="M12.5 13C13.8807 13 15 11.8807 15 10.5C15 9.11929 13.8807 8 12.5 8C11.1193 8 10 9.11929 10 10.5C10 11.8807 11.1193 13 12.5 13Z"
+                            stroke="#BDBDBD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        Москва ул.Красная сосна 2 к1 стр1 офис 555
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="product__tabs-head-mobile tabs">
+            <div class="tabs__head">
+              <ul class="tabs__nav">
+                <li class="tabs__nav-item tabs__nav-item--active" data-target="1">
+                  <button class="tabs__nav-btn">Описание</button>
+                </li>
+                <li class="tabs__nav-item" data-target="2"><button class="tabs__nav-btn">Характеристики</button></li>
+                <li class="tabs__nav-item" data-target="3"><button class="tabs__nav-btn">Преимущества</button></li>
+                <li class="tabs__nav-item" data-target="4"><button class="tabs__nav-btn">Документы и
+                    сертификаты</button></li>
+              </ul>
+            </div>
+
+            <div class="product__tabs tabs">
+              <ul class="tabs__content">
+                <li class="tabs__panel tabs__panel--active" id="1">
+                  <div class="tabs__content-wrap">
+                    <div class="text-block">
+                      <div class="text-block__wrapper">
+                        <p class="text-block__text">
+                          Универсальный полиуретановый серый герметик Рустил 1К PU25 600 мл предназначен для различных
+                          задач герметизации, изоляции при строительстве и
+                          ремонте.
+                        </p>
+                        <p class="text-block__text">
+                          В применении – легко наносимая паста серого цвета, наносится с помощью пистолета для
+                          герметика.
+                        </p>
+                        <p class="text-block__text">
+                          Отверждается влагой воздуха. После отверждения –
+                          эластичный, резиноподобный материал, обладающий прочнейшей адгезией к основным строительным
+                          материалам.
+                        </p>
+                      </div>
+
+                      <h4 class="text-block__subtitle">Применение</h4>
+
+                      <ul class="text-block__list">
+                        <li class="text-block__list-item">
+                          Для наружных и внутренних работ по герметизации деформационных швов строительных конструкций
+                          с деформацией шва до 25%;
+
+                        </li>
+                        <li class="text-block__list-item">Для деформационных швов в бетонных полах;</li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="tabs__panel tabs__panel" id="2">
+                  <div class="tabs__content-wrap">
+                    <table class="table">
+                      <tbody>
+                        <tr class="table__row">
+                          <td class="table__cell table__property">Нормативная документация</td>
+                          <td class="table__cell table__value">ТУ 20.30.22-002-40019535-2017</td>
+                        </tr>
+                        <tr class="table__row">
+                          <td class="table__cell table__property">Эксплуатационные свойства</td>
+                          <td class="table__cell table__value">Морозостойкий, атмосферостойкий</td>
+                        </tr>
+                        <tr class="table__row">
+                          <td class="table__cell table__property">Состав</td>
+                          <td class="table__cell table__value">Акриловые</td>
+                        </tr>
+                        <tr class="table__row">
+                          <td class="table__cell table__property">Внешний вид</td>
+                          <td class="table__cell table__value">Однородная паста белого цвета</td>
+                        </tr>
+                        <tr class="table__row">
+                          <td class="table__cell table__property">Тип применения</td>
+                          <td class="table__cell table__value">Для наружных и внутренних работ</td>
+                        </tr>
+                        <tr class="table__row">
+                          <td class="table__cell table__property">Материалы применения</td>
+                          <td class="table__cell table__value">Бетон, газобетон, кирпич, дерево, пластик</td>
+                        </tr>
+                        <tr class="table__row">
+                          <td class="table__cell table__property">Температура применения</td>
+                          <td class="table__cell table__value">от -10°C до +35°C</td>
+                        </tr>
+                        <tr class="table__row">
+                          <td class="table__cell table__property">Температура эксплуатации</td>
+                          <td class="table__cell table__value">от -40°C до +80°C</td>
+                        </tr>
+                        <tr class="table__row">
+                          <td class="table__cell table__property">Плотность</td>
+                          <td class="table__cell table__value">1,5 кг/л</td>
+                        </tr>
+                        <tr class="table__row">
+                          <td class="table__cell table__property">Время высыхания</td>
+                          <td class="table__cell table__value">24 - 48 часов - при температуре +20° C и влажности 60%.
+                            С понижением температуры и увеличении влажности - время высыхания увеличивается, до 7
+                            дней.</td>
+                        </tr>
+                        <tr class="table__row">
+                          <td class="table__cell table__property">Гарантийный срок хранения</td>
+                          <td class="table__cell table__value">12 месяцев при температурах от 0°C до +30°C.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </li>
+
+                <li class="tabs__panel tabs__panel" id="3">
+                  <div class="tabs__content-wrap">
+                    <div class="text-block">
+                      <ul class="text-block__list">
+                        <li class="text-block__list-item">
+                          Морозостойкий акриловый герметик Рустил Акрил - готов к нанесению при температурах до -10⁰С.
+                        </li>
+                        <li class="text-block__list-item">Сохраняет эластичность при больших перепадах температур от
+                          -40⁰С до +80⁰С</li>
+                        <li class="text-block__list-item">Легко наноситься, легко разравнивается.</li>
+                        <li class="text-block__list-item">Отличная тиксотропность - не течет в вертикальных и
+                          потолочных швах.</li>
+                        <li class="text-block__list-item">Хорошая адгезия (прилипание) к бетонным, деревянным
+                          поверхностям, кирпичу.</li>
+                        <li class="text-block__list-item">Устойчив к воздействию климатических факторов, УФ-излучению.
+                        </li>
+                        <li class="text-block__list-item">Безопасен в применении, не имеет запаха</li>
+                        <li class="text-block__list-item">Ценовое преимущество - купить акриловый герметик Рустил
+                          Акрил можно напрямую от
+                          производителя.</li>
+                      </ul>
+                    </div>
+                </li>
+
+                <li class="tabs__panel tabs__panel" id="4">
+                  <div class="tabs__content-wrap">
+                    <div class="product__download download">
+                      <svg class="download__icon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M21 14.25v5.25a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 19.5v-5.25a.75.75 0 1 1 1.5 0v5.25h15v-5.25a.75.75 0 1 1 1.5 0Zm-9.53.53a.747.747 0 0 0 1.06 0l3.75-3.75a.75.75 0 1 0-1.06-1.06l-2.47 2.47V3.75a.75.75 0 1 0-1.5 0v8.69L8.78 9.97a.75.75 0 0 0-1.06 1.06l3.75 3.75Z"
+                          fill="#1C1C1C" />
+                      </svg>
+
+                      <a class="download__link" href="#">Инструкция по нанесению</a>
+                    </div>
+
+                    <div class="product__download download">
+                      <svg class="download__icon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M21 14.25v5.25a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 19.5v-5.25a.75.75 0 1 1 1.5 0v5.25h15v-5.25a.75.75 0 1 1 1.5 0Zm-9.53.53a.747.747 0 0 0 1.06 0l3.75-3.75a.75.75 0 1 0-1.06-1.06l-2.47 2.47V3.75a.75.75 0 1 0-1.5 0v8.69L8.78 9.97a.75.75 0 0 0-1.06 1.06l3.75 3.75Z"
+                          fill="#1C1C1C" />
+                      </svg>
+
+                      <a class="download__link" href="#">Технический лист</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -448,7 +774,7 @@
 
     @include('partials/products-slider.html')
 
-    <section class="product__form form">
+    <!-- <section class="product__form form">
       <div class="container">
         <div class="form__inner">
           <form class="form__form" id="form_section" enctype="multipart/form-data">
@@ -546,7 +872,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
 </body>
 

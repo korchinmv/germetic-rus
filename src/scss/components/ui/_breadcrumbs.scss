@@ -9,14 +9,16 @@
   &__list {
     display: inline-flex;
     flex-wrap: wrap;
-    // overflow-x: auto;
   }
 
   &__item {
     color: var(--light-gray-color);
     position: relative;
-    // flex-shrink: 0;
     transition: color 0.3s ease;
+
+    @media screen and (width <= 768px) {
+      margin-bottom: 4px;
+    }
 
     &:hover {
       color: var(--red-color);
@@ -25,10 +27,6 @@
     &:not(:last-child) {
       padding-right: 14px;
       margin-right: 8px;
-
-      @media screen and (width <= 768px) {
-        margin-bottom: 4px;
-      }
 
       &:after {
         content: '/';
@@ -39,8 +37,6 @@
 
     &--active {
       opacity: 1;
-      // white-space: nowrap;
-      // overflow: hidden;
       text-overflow: ellipsis;
       color: var(--black-color);
 

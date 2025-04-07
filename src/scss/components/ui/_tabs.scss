@@ -16,6 +16,10 @@
   &__head {
     margin-bottom: 30px;
     position: relative;
+
+    @media screen and (width <= 768px) {
+      margin-bottom: 24px;
+    }
   }
 
   &__nav-item {
@@ -23,10 +27,6 @@
 
     &:not(:last-child) {
       margin-right: 5px;
-
-      @media screen and (width <= 768px) {
-        margin-right: 24px;
-      }
     }
 
     &--active {

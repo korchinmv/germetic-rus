@@ -117,6 +117,10 @@ button {
 
   &__wrapper {
     margin-bottom: 24px;
+
+    @media screen and (width <= 768px) {
+      margin-bottom: 16px;
+    }
   }
 
   &__text {
@@ -124,10 +128,18 @@ button {
     font-size: 18px;
     line-height: 1.4;
     margin-bottom: 10px;
+
+    @media screen and (width <= 768px) {
+      font-size: 16px;
+    }
   }
 
   &__list {
     padding-left: 2.7rem;
+
+    @media screen and (width <= 768px) {
+      padding-left: 1.5rem;
+    }
   }
 
   &__list-item {
@@ -136,8 +148,16 @@ button {
     line-height: 1.4;
     list-style-type: disc;
 
+    @media screen and (width <= 768px) {
+      font-size: 16px;
+    }
+
     &:not(:last-child) {
       margin-bottom: 3px;
+
+      @media screen and (width <= 768px) {
+        margin-bottom: 1px;
+      }
     }
   }
 }
