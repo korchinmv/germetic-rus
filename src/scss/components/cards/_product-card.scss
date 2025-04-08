@@ -5,6 +5,10 @@
   display: flex;
   flex-direction: column;
 
+  @media screen and (width <= 768px) {
+    padding: 16px;
+  }
+
   &__img {
     margin-bottom: 12px;
     height: 250px;
@@ -42,10 +46,18 @@
 
   &__price-num {
     font-size: 24px;
+
+    @media screen and (width <= 768px) {
+      font-size: 20px;
+    }
   }
 
   &__price-text {
     font-size: 18px;
+
+    @media screen and (width <= 768px) {
+      font-size: 16px;
+    }
   }
 
   &__sale-price-wrapper {
@@ -63,10 +75,21 @@
       transition: all 0.3s;
     }
 
+    @media screen and (width <= 1200px) {
+      display: none;
+    }
+
     &:hover {
       path {
         stroke: var(--red-color);
       }
+    }
+  }
+
+  &__button {
+    @media screen and (width <= 768px) {
+      padding: 11px 19px !important;
+      font-size: 16px;
     }
   }
 }

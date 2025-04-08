@@ -1,12 +1,20 @@
 .form {
   &__inner {
     display: flex;
+
+    @media screen and (width <= 1024px) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__form {
     background-color: var(--bg-color);
     padding: 40px 60px 40px 40px;
     width: 100%;
+
+    @media screen and (width <= 768px) {
+      padding: 32px 16px;
+    }
   }
 
   &__title {
@@ -19,6 +27,10 @@
     font-size: 18px;
     line-height: 1.4;
     margin-bottom: 40px;
+
+    @media screen and (width <= 768px) {
+      font-size: 16px;
+    }
   }
 
   &__input-group {
@@ -26,6 +38,10 @@
 
     .form__input {
       margin-bottom: 32px;
+
+      @media screen and (width <= 768px) {
+        margin-bottom: 24px;
+      }
     }
   }
 
@@ -52,6 +68,10 @@
       font-size: 18px;
       color: var(--line-color);
       transition: color 0.3s;
+
+      @media screen and (width <= 768px) {
+        font-size: 16px;
+      }
     }
 
     &:focus {
@@ -68,6 +88,10 @@
     justify-content: space-between;
     column-gap: 40px;
 
+    @media screen and (width <= 768px) {
+      flex-direction: column;
+    }
+
     &.mb {
       margin-bottom: 18px;
     }
@@ -83,12 +107,25 @@
     max-width: 605px;
     display: flex;
     flex-direction: column;
+
+    @media screen and (width <= 1024px) {
+      max-width: 100%;
+    }
+
+    @media screen and (width <= 768px) {
+      padding: 24px 16px;
+    }
   }
 
   &__content-title {
     font-weight: 600;
     font-size: 24px;
     margin-bottom: 24px;
+
+    @media screen and (width <= 768px) {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
   }
 
   &__content-bot {
@@ -105,8 +142,16 @@
     font-size: 18px;
     line-height: 1.33333;
 
+    @media screen and (width <= 768px) {
+      font-size: 16px;
+    }
+
     &:not(:last-child) {
       margin-bottom: 16px;
+
+      @media screen and (width <= 768px) {
+        margin-bottom: 8px;
+      }
     }
   }
 
@@ -114,26 +159,67 @@
     display: flex;
     align-items: center;
     column-gap: 8px;
+
+    @media screen and (width <= 768px) {
+      align-self: flex-start;
+    }
+  }
+
+  &__content-top {
+    @media screen and (width <= 768px) {
+      margin-bottom: 40px;
+    }
   }
 
   &__bottom {
     display: flex;
     column-gap: 27px;
     align-items: center;
+
+    @media screen and (width <= 768px) {
+      flex-direction: column-reverse;
+      row-gap: 24px;
+    }
   }
 
   &__file-lable {
     margin-right: 240px;
+
+    @media screen and (width <= 768px) {
+      margin-right: 0;
+      align-self: flex-start;
+    }
+  }
+
+  &__send-btn {
+    @media screen and (width <= 768px) {
+      align-self: flex-start;
+    }
+
+    @media screen and (width <= 576px) {
+      width: 100%;
+    }
   }
 
   &__inputs-wrap {
     display: flex;
     margin-bottom: 56px;
     align-items: center;
+
+    @media screen and (width <= 768px) {
+      flex-direction: column;
+      row-gap: 16px;
+      margin-bottom: 16px;
+    }
   }
 
   &__text-policy {
     max-width: 407px;
+
+    @media screen and (width <= 768px) {
+      max-width: 100%;
+      align-self: flex-start;
+    }
   }
 
   &__text-policy-link {

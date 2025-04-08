@@ -10,20 +10,23 @@ const productsSwiper = new Swiper(".products-slider__slider", {
     nextEl: ".products-slider__slider-controls-next",
     prevEl: ".products-slider__slider-controls-prev",
   },
-  // pagination: {
-  //   el: ".clients__pagination",
-  //   type: "progressbar",
-  // },
+  pagination: {
+    el: ".products-slider__pagination",
+    type: "progressbar",
+  },
   breakpoints: {
     // when window width is >= 990px
     1600: {
       slidesPerView: 4,
       spaceBetween: 20,
     },
-
-    1100: {
+    1200: {
       slidesPerView: 3,
       spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 16,
     },
   },
 });

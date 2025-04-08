@@ -1,0 +1,77 @@
+.slider-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 7px;
+  width: 100%;
+  z-index: 2;
+
+  @media screen and (width <= 568px) {
+    max-width: 100%;
+  }
+
+  .swiper-pagination-bullet {
+    position: relative;
+    width: 24px;
+    height: 2px;
+    text-align: left;
+    opacity: 1;
+    background-color: var(--medium-gray);
+
+    i {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 2px;
+      background-color: var(--white);
+    }
+
+    b {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      width: 0%;
+      height: 2px;
+      background-color: var(--accent);
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: transparent;
+    width: 203px;
+    transition: all 0.3s;
+
+    b {
+      animation-name: countingBar;
+      animation-duration: 3s;
+      animation-timing-function: ease-in;
+      animation-iteration-count: 1;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &.swiper-pagination-progressbar {
+    border-radius: 2px;
+    background-color: var(--bg-color);
+    height: 2px;
+  }
+
+  .swiper-pagination-progressbar-fill {
+    background-color: var(--red-color);
+    border-radius: 2px;
+    height: 2px;
+  }
+
+  @keyframes countingBar {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+}
