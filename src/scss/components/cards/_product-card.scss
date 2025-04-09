@@ -35,6 +35,10 @@
     display: flex;
     column-gap: 24px;
     margin-top: auto;
+
+    @media screen and (width <= 768px) {
+      justify-content: space-between;
+    }
   }
 
   &__price-wrapper {
@@ -46,14 +50,26 @@
 
   &__price-num {
     font-size: 24px;
+    font-family: 'Unbounded';
+    font-weight: 600;
 
     @media screen and (width <= 768px) {
       font-size: 20px;
     }
   }
 
+  &__sale-price-num,
+  &__sale-price-text {
+    @media screen and (width <= 768px) {
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+
   &__price-text {
     font-size: 18px;
+    font-family: 'Unbounded';
+    font-weight: 600;
 
     @media screen and (width <= 768px) {
       font-size: 16px;
@@ -90,6 +106,7 @@
     @media screen and (width <= 768px) {
       padding: 11px 19px !important;
       font-size: 16px;
+      height: 48px;
     }
   }
 }
