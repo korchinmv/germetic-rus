@@ -12,15 +12,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const resultNumElement = document.getElementById("result");
   const resultNumElementMobile = document.getElementById("resultMobile");
 
-  // Функция для добавления " мм" к значению
-  const addMMSuffix = (input) => {
-    if (!input.value.endsWith(" мм") && input.value.trim() !== "") {
-      input.value = input.value.replace(/ мм$/, "") + " мм";
+  // Функция для добавления единиц измерения к значению
+  const addUnitSuffix = (input, isLength = false) => {
+    const unit = isLength ? " м" : " мм";
+    if (!input.value.endsWith(unit) && input.value.trim() !== "") {
+      input.value = input.value.replace(/ (м|мм)$/, "") + unit;
     }
   };
 
   // Функция для валидации ввода (только числа)
-  const validateNumberInput = (input) => {
+  const validateNumberInput = (input, isLength = false) => {
     // Сохраняем позицию курсора
     const cursorPosition = input.selectionStart;
 
@@ -28,7 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const numericValue = input.value.replace(/[^0-9.]/g, "");
 
     // Если значение содержит нечисловые символы - очищаем поле
-    if (numericValue !== input.value.replace(/ мм$/, "")) {
+    const currentValue = input.value.replace(isLength ? / м$/ : / мм$/, "");
+    if (numericValue !== currentValue) {
       input.value = "";
       return false;
     }
@@ -41,9 +43,11 @@ document.addEventListener("DOMContentLoaded", function () {
     return true;
   };
 
-  // Функция для получения числового значения
-  const getNumericValue = (input) => {
-    return parseFloat(input.value.replace(/ мм$/, "")) || 0;
+  // Функция для получения числового значения с учетом единиц измерения
+  const getNumericValue = (input, isLength = false) => {
+    const value = input.value.replace(isLength ? / м$/ : / мм$/, "");
+    const numValue = parseFloat(value) || 0;
+    return isLength ? numValue : numValue; // длина уже в метрах, другие параметры в мм
   };
 
   // Функция для вычисления результата
@@ -57,9 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const volumeText = activeVolumeLabel.childNodes[0].textContent.trim();
     const volumeValue = parseFloat(volumeText);
 
-    const width = getNumericValue(widthEl);
-    const depth = getNumericValue(depthEl);
-    const length = getNumericValue(lengthEl);
+    const width = getNumericValue(widthEl); // в мм
+    const depth = getNumericValue(depthEl); // в мм
+    const length = getNumericValue(lengthEl, true); // в метрах
 
     // Обновляем все элементы с объемом
     productVolumeTexts.forEach((el) => (el.textContent = volumeText));
@@ -96,22 +100,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Функция для настройки обработчиков событий
-  const setupInputHandlers = (input) => {
+  const setupInputHandlers = (input, isLength = false) => {
     if (!input) return;
 
-    // Добавляем "мм" при клике
+    // Добавляем единицы измерения при клике
     input.addEventListener("click", () => {
       if (input.value.trim() === "") {
-        input.value = " мм";
+        input.value = isLength ? " м" : " мм";
         input.setSelectionRange(0, 0);
       }
     });
 
     // Валидация при вводе
     input.addEventListener("input", () => {
-      if (validateNumberInput(input)) {
-        if (!input.value.endsWith(" мм") && input.value.trim() !== "") {
-          input.value += " мм";
+      if (validateNumberInput(input, isLength)) {
+        const unit = isLength ? " м" : " мм";
+        if (!input.value.endsWith(unit) && input.value.trim() !== "") {
+          input.value += unit;
         }
       }
 
@@ -129,10 +134,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Добавляем "мм" при потере фокуса, если есть число
+    // Добавляем единицы измерения при потере фокуса, если есть число
     input.addEventListener("blur", () => {
-      if (input.value.replace(/ мм$/, "").trim() !== "") {
-        addMMSuffix(input);
+      if (input.value.replace(isLength ? / м$/ : / мм$/, "").trim() !== "") {
+        addUnitSuffix(input, isLength);
       } else {
         input.value = "";
       }
@@ -141,22 +146,23 @@ document.addEventListener("DOMContentLoaded", function () {
     // Валидация при вставке из буфера
     input.addEventListener("paste", () => {
       setTimeout(() => {
-        if (validateNumberInput(input)) {
-          addMMSuffix(input);
+        if (validateNumberInput(input, isLength)) {
+          addUnitSuffix(input, isLength);
         }
       }, 0);
     });
   };
 
   // Настраиваем обработчики для всех полей ввода
-  [
-    widthInput,
-    depthInput,
-    lengthInput,
-    widthInputMobile,
-    depthInputMobile,
-    lengthInputMobile,
-  ].forEach(setupInputHandlers);
+  // Ширина и глубина в мм (isLength = false)
+  setupInputHandlers(widthInput, false);
+  setupInputHandlers(depthInput, false);
+  setupInputHandlers(widthInputMobile, false);
+  setupInputHandlers(depthInputMobile, false);
+
+  // Длина в метрах (isLength = true)
+  setupInputHandlers(lengthInput, true);
+  setupInputHandlers(lengthInputMobile, true);
 
   // Инициализация калькулятора
   if (widthInput && depthInput && lengthInput) {

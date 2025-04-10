@@ -347,6 +347,7 @@
 
     svg {
       flex-shrink: 0;
+      align-self: flex-start;
     }
 
     &:not(:last-child) {
@@ -488,6 +489,10 @@
 
     &__title-text {
       font-size: 24px;
+
+      @media screen and (width <= 768px) {
+        font-size: 18px;
+      }
     }
 
     &__info {
@@ -601,9 +606,11 @@
   position: absolute;
   opacity: 0;
 }
+
 .checkbox-wrapper label:not(:last-child) {
   margin-right: 16px;
 }
+
 .checkbox-wrapper label {
   display: block;
   position: relative;
@@ -616,9 +623,11 @@
   user-select: none;
   padding: 10px 24px;
 }
+
 .checkbox-wrapper label.active {
   color: var(--red-color);
 }
+
 .checkbox-wrapper span {
   position: absolute;
   top: 0;
@@ -629,6 +638,7 @@
   border-radius: 100px;
   border: 1px solid var(--line-color);
 }
+
 .checkbox-wrapper label input:checked ~ span {
   background: rgba(227, 60, 24, 0.1);
   border: 1px solid var(--red-color);
